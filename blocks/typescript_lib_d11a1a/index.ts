@@ -1,5 +1,5 @@
-import type { VocanaMainFunction, DefaultObject } from "@vocana/sdk";
-import { CheerioCrawler, Dataset } from "crawlee";
+import type { VocanaMainFunction } from "@vocana/sdk";
+import { CheerioCrawler } from "crawlee";
 
 type Inputs = {
   url: string;

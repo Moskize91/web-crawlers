@@ -16,19 +16,11 @@ nodes:
       [
         {
             handle: url,
-            trigger: null,
-            cache: { initial_value: https://www.baozimh.com/comic/yaoshenji-taxuedongman },
-            from_flow: null,
-            from_node: null,
-            from_slot: null
+            cache: { initial_value: https://www.baozimh.com/comic/yaoshenji-taxuedongman }
           },
         {
             handle: maxResponse,
-            trigger: null,
-            cache: { initial_value: 4 },
-            from_flow: null,
-            from_node: null,
-            from_slot: null
+            cache: { initial_value: 4 }
           }
       ]
     title: 章节爬取
@@ -38,27 +30,17 @@ nodes:
       [
         {
             handle: path,
-            trigger: null,
-            cache: { initial_value: /oomol-storage/PDF/漫画PDF },
-            from_flow: null,
-            from_node: null,
-            from_slot: null
+            cache: { initial_value: /oomol-storage/PDF/漫画PDF }
           },
         {
             handle: title,
-            trigger: null,
             cache: true,
-            from_flow: null,
-            from_node: [ { node_id: ee577637-751a-4824-aea9-3084af089159, output_handle: title } ],
-            from_slot: null
+            from_node: [ { node_id: ee577637-751a-4824-aea9-3084af089159, output_handle: title } ]
           },
         {
             handle: imagePathes,
-            trigger: null,
             cache: true,
-            from_flow: null,
-            from_node: [ { node_id: ee577637-751a-4824-aea9-3084af089159, output_handle: imagePaths } ],
-            from_slot: null
+            from_node: [ { node_id: ee577637-751a-4824-aea9-3084af089159, output_handle: imagePaths } ]
           }
       ]
     title: 合成 PDF
@@ -68,12 +50,12 @@ nodes:
       [
         {
             handle: page,
-            trigger: null,
             cache: true,
-            from_flow: null,
-            from_node: [ { node_id: 78a6438d-062d-4aa1-a024-d7ad5ec38a0d, output_handle: page } ],
-            from_slot: null
+            from_node: [ { node_id: 78a6438d-062d-4aa1-a024-d7ad5ec38a0d, output_handle: page } ]
           },
-        { handle: path, cache: true }
+        {
+            handle: path,
+            cache: { initial_value: "" }
+          }
       ]
     title: 下载图片
